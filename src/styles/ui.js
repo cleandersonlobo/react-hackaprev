@@ -36,12 +36,11 @@ export const CardEmpresas = styled(Paper).attrs({
   .card-details {
     padding-bottom: 5px;
     font-size: 1.2rem;
-    span:first-child {
+    p:first-child {
       color: #ff4858;
       font-weight: 800;
     }
-    span:first-child {
-      display: block;
+    p:first-child {
       text-align: center;
       font-weight: bold;
       letter-spacing: 0.4px;

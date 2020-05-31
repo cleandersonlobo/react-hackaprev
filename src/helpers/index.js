@@ -1,5 +1,8 @@
 import currencylib from 'currency.js';
+import moment from 'moment';
+import 'moment/locale/pt-br';
 
+moment.locale('pt-br');
 export const convertMoney = (price, currency = 'BRL') => {
   const convert = {
     BRL: (value) =>
@@ -34,3 +37,6 @@ export const cashbackCalculate = (transactions) => {
     average_feedback_score: feedback_score / transactions.length,
   };
 };
+
+export const formatTransactionDate = (pubDate) =>
+  moment(pubDate).format('DD MMM YYYY').toUpperCase();

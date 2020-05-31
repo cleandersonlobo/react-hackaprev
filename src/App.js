@@ -18,7 +18,7 @@ const WaitingComponent = (Component) => (props = {}) => (
 );
 
 const App = () => {
-  const [type, setType] = useState('light');
+  const [type, setType] = useState('dark');
   const prefersDarkMode = useMediaQuery(`(prefers-color-scheme: ${type})`);
 
   const handleOnChangeTheme = useCallback(() => {

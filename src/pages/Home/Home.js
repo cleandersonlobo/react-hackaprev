@@ -47,8 +47,8 @@ const Home = () => {
                 <Image src={empresa.img} alt={empresa.name} draggable="false" />
               </Box>
               <div className="card-details">
-                <Typography variant="span">{empresa.discont}</Typography>
-                <Typography variant="span">de volta</Typography>
+                <Typography>{empresa.discont}</Typography>
+                <Typography>de volta</Typography>
               </div>
             </CardEmpresas>
           </Grid>

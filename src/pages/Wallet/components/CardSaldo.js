@@ -10,7 +10,8 @@ import { cashbackCalculate } from 'helpers';
 const CardSaldo = () => {
   const { client } = useContext(ClienteContenxt);
   const { transactions } = client || { transactions: [] };
-  const saldo = useMemo(() => cashbackCalculate(transactions), [client]);
+  const saldo = useMemo(() => cashbackCalculate(transactions), []);
+
   return (
     <Grid container justify="center">
       <Grid item xs={12} sm={8} md={6} justify="center">
@@ -20,9 +21,9 @@ const CardSaldo = () => {
               <Grid xs="auto" item style={{ opacity: 0.8 }}>
                 <WalletIcon />
               </Grid>
-              <Grid item xs={6} spacing={3}>
+              <Grid item xs={6}>
                 <Box fontWeight="fontWeightLight" textAlign="center">
-                  Carteira
+                  Saldo
                 </Box>
                 {saldo ? (
                   <Box fontWeight="fontWeightBold" textAlign="center" fontSize={22} lineHeight={2}>
@@ -31,7 +32,7 @@ const CardSaldo = () => {
                 ) : (
                   <Skeleton animation="wave" height={40} />
                 )}
-                <Grid container justify="center" alignItems="center" spacing={1}>
+                <Grid container justify="center" alignItems="center">
                   <Grid item>
                     <StarIcon style={{ color: yellow[700], fontSize: 22 }} />
                     <StarIcon style={{ color: yellow[700], fontSize: 22 }} />
