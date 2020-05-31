@@ -1,7 +1,12 @@
 import React from 'react';
+import { Container } from '@material-ui/core';
 
 const Home = () => {
-  return <div />;
+  return (
+    <Container>
+      <h2>Home</h2>
+    </Container>
+  );
 };
 
 Home.propTypes = {};
