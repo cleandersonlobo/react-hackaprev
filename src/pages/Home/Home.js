@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import { Image, CardEmpresas } from 'styles/ui';
 
 const empresas = [
@@ -16,6 +17,22 @@ const empresas = [
     discont: '10%',
     img: 'https://cuponomia-a.akamaihd.net/img/stores/original/americanas-637195380182765939.png',
   },
+  {
+    name: 'Magalu',
+    discont: '3%',
+    img: 'https://media.glassdoor.com/sqll/382606/magazine-luiza-squarelogo-1564520166281.png',
+  },
+  {
+    name: 'Kabum',
+    discont: '5%',
+    img: 'https://imagens.canaltech.com.br/empresas/5193.400.jpg',
+  },
+  {
+    name: 'Amazon',
+    discont: '5%',
+    img:
+      'https://cdn-istoedinheiro-ssl.akamaized.net/wp-content/uploads/sites/17/2018/08/amazon-1024x683.png',
+  },
 ];
 
 const Home = () => {
@@ -26,12 +43,12 @@ const Home = () => {
         {empresas.map((empresa) => (
           <Grid key={empresa.name} item xs={4} sm={4} md={3} lg={2}>
             <CardEmpresas>
-              <Box display="block">
-                <Image src={empresa.img} alt={empresa.name} />
+              <Box display="flex" alignItems="stretch" height="100%">
+                <Image src={empresa.img} alt={empresa.name} draggable="false" />
               </Box>
               <div className="card-details">
-                <span>{empresa.discont}</span>
-                <span>de volta</span>
+                <Typography variant="span">{empresa.discont}</Typography>
+                <Typography variant="span">de volta</Typography>
               </div>
             </CardEmpresas>
           </Grid>

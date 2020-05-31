@@ -16,10 +16,12 @@ export const Footer = styled.footer`
 `;
 
 export const Image = styled.img`
-  margin: auto;
   display: block;
+  object-fit: cover;
   max-width: 100%;
   max-height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
 `;
 
 export const CardEmpresas = styled(Paper).attrs({
@@ -33,6 +35,7 @@ export const CardEmpresas = styled(Paper).attrs({
   flex-direction: column;
   .card-details {
     padding-bottom: 5px;
+    font-size: 1.2rem;
     span:first-child {
       color: #ff4858;
       font-weight: 800;
