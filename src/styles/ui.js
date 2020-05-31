@@ -3,12 +3,16 @@ import Paper from '@material-ui/core/Paper';
 
 export const Main = styled.div`
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+  padding-bottom: 56px;
 `;
 
 export const Footer = styled.footer`
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
 
 export const Image = styled.img`

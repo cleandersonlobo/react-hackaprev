@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { SuspenseLoading, BottomTabsNavigation, Header } from 'components';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Main } from 'styles/ui';
 import { routes } from './routes';
@@ -44,19 +44,21 @@ const App = () => {
       <Router>
         <React.Suspense fallback={<SuspenseLoading hideLogo />}>
           <Main>
-            <Container>
-              <Header themeType={type} onChangeTheme={handleOnChangeTheme} />
-              <Switch>
-                {routes.map(({ component: Component, ...otherProps }) => {
-                  const LazyComponent = WaitingComponent(Component);
-                  return (
-                    <Route key={otherProps.path} {...otherProps}>
-                      <LazyComponent />
-                    </Route>
-                  );
-                })}
-              </Switch>
-            </Container>
+            <Header themeType={type} onChangeTheme={handleOnChangeTheme} />
+            <Box flexGrow={1}>
+              <Container>
+                <Switch>
+                  {routes.map(({ component: Component, ...otherProps }) => {
+                    const LazyComponent = WaitingComponent(Component);
+                    return (
+                      <Route key={otherProps.path} {...otherProps}>
+                        <LazyComponent />
+                      </Route>
+                    );
+                  })}
+                </Switch>
+              </Container>
+            </Box>
             <BottomTabsNavigation />
           </Main>
         </React.Suspense>
