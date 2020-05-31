@@ -11,6 +11,6 @@ export const routes = [
   {
     exact: true,
     path: '/transacao',
-    component: lazyImport('Home'),
+    component: lazyImport('Transactions'),
   },
 ];
