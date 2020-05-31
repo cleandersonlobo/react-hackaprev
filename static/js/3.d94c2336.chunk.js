@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-hackaprev"]=this["webpackJsonpreact-hackaprev"]||[]).push([[3],{62:function(a,e,t){"use strict";t.r(e);var r=t(0),n=t.n(r),c=t(132),l=t(129),u=t(128),o=t(131);e.default=function(a){var e=a.transaction,t=e.product,r=e.category;return n.a.createElement(n.a.Fragment,null,n.a.createElement(c.a,{button:!0},n.a.createElement(u.a,null,n.a.createElement(o.a,{alt:r},r.charAt(0))),n.a.createElement(l.a,{primary:t,secondary:r})))}}}]);
-//# sourceMappingURL=3.d94c2336.chunk.js.map
