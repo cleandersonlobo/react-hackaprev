@@ -20,10 +20,15 @@ const BottomTabsNavigation = () => {
         onChange={(event, newValue) => {
           history.push(newValue);
         }}>
-        <BottomNavigationAction label="Inicio" value="/" icon={<Storefront />} color="info" />
+        <BottomNavigationAction
+          label="Inicio"
+          value={`${process.env.PUBLIC_URL}/`}
+          icon={<Storefront />}
+          color="info"
+        />
         <BottomNavigationAction
           label="Transações"
-          value="/transacao"
+          value={`${process.env.PUBLIC_URL}/transacao`}
           icon={<SwapHorizontalCircleSharp />}
         />
         <BottomNavigationAction label="Carteira" icon={<AccountBalanceWallet />} />

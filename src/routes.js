@@ -5,12 +5,12 @@ const lazyImport = (filename) => React.lazy(() => import(`pages/${filename}/${fi
 export const routes = [
   {
     exact: true,
-    path: '/',
+    path: `${process.env.PUBLIC_URL}/`,
     component: lazyImport('Home'),
   },
   {
     exact: true,
-    path: '/transacao',
+    path: `${process.env.PUBLIC_URL}/transacao`,
     component: lazyImport('Transactions'),
   },
 ];

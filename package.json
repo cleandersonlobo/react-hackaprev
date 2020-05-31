@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Cleanderson Lobo",
-  "homepage": "https://cleandersonlobo.github.io/react-hackaprev/",
+  "homepage": "https://cleandersonlobo.github.io/react-hackaprev",
   "repository": "https://github.com/cleandersonlobo/react-hackaprev",
   "dependencies": {
     "@material-ui/core": "^4.10.0",
@@ -27,6 +27,7 @@
     "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
