@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import { TransactionsContenxt } from '../Transactions';
+import { ClienteContenxt } from 'contexts';
 import { BoxDivider } from '../styles';
 import ItemTransaction from './ItemTransaction';
 
 const ListTransactions = () => {
-  const { client = null } = useContext(TransactionsContenxt);
+  const { client = null } = useContext(ClienteContenxt);
   if (!client) return null;
   const { transactions } = client;
   return (

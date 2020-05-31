@@ -7,6 +7,8 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Container, Box } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Main } from 'styles/ui';
+import { ClienteContenxt } from 'contexts';
+import { CLIENTE_MOCK } from 'data/client';
 import { routes } from './routes';
 
 const WaitingComponent = (Component) => (props = {}) => (
@@ -43,24 +45,26 @@ const App = () => {
       <CssBaseline />
       <Router>
         <React.Suspense fallback={<SuspenseLoading hideLogo />}>
-          <Main>
-            <Header themeType={type} onChangeTheme={handleOnChangeTheme} />
-            <Box flexGrow={1}>
-              <Container>
-                <Switch>
-                  {routes.map(({ component: Component, ...otherProps }) => {
-                    const LazyComponent = WaitingComponent(Component);
-                    return (
-                      <Route key={otherProps.path} {...otherProps}>
-                        <LazyComponent />
-                      </Route>
-                    );
-                  })}
-                </Switch>
-              </Container>
-            </Box>
-            <BottomTabsNavigation />
-          </Main>
+          <ClienteContenxt.Provider value={{ client: CLIENTE_MOCK }}>
+            <Main>
+              <Header themeType={type} onChangeTheme={handleOnChangeTheme} />
+              <Box flexGrow={1}>
+                <Container>
+                  <Switch>
+                    {routes.map(({ component: Component, ...otherProps }) => {
+                      const LazyComponent = WaitingComponent(Component);
+                      return (
+                        <Route key={otherProps.path} {...otherProps}>
+                          <LazyComponent />
+                        </Route>
+                      );
+                    })}
+                  </Switch>
+                </Container>
+              </Box>
+              <BottomTabsNavigation />
+            </Main>
+          </ClienteContenxt.Provider>
         </React.Suspense>
       </Router>
     </ThemeProvider>

@@ -13,4 +13,9 @@ export const routes = [
     path: `${process.env.PUBLIC_URL}/transacao`,
     component: lazyImport('Transactions'),
   },
+  {
+    exact: true,
+    path: `${process.env.PUBLIC_URL}/wallet`,
+    component: lazyImport('Wallet'),
+  },
 ];

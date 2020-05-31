@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 const ItemTransaction = ({ transaction }) => {
   const classes = useStyles();
   const { product, category, cashback_percentage, price_currency, price_value } = transaction;
-  const price = useMemo(() => convertMoney(price_currency, price_value), [price_value]);
+  const price = useMemo(() => convertMoney(price_value, price_currency), [price_value]);
   return (
     <>
       <ListItem button>

@@ -6,7 +6,7 @@ const SuspenseLoading = () => {
   return (
     <Container>
       <Content>
-        <ReactLoading type="bars" color="#ffac33" />
+        <ReactLoading type="bars" color="#FF4858" />
       </Content>
     </Container>
   );

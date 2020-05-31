@@ -31,7 +31,11 @@ const BottomTabsNavigation = () => {
           value={`${process.env.PUBLIC_URL}/transacao`}
           icon={<SwapHorizontalCircleSharp />}
         />
-        <BottomNavigationAction label="Carteira" icon={<AccountBalanceWallet />} />
+        <BottomNavigationAction
+          label="Carteira"
+          value={`${process.env.PUBLIC_URL}/wallet`}
+          icon={<AccountBalanceWallet />}
+        />
         <BottomNavigationAction label="Perfil" icon={<People />} />
       </BottomNavigation>
     </Footer>
