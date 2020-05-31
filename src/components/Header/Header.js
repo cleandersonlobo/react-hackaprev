@@ -7,8 +7,9 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 const Header = ({ themeType, onChangeTheme }) => {
   return (
     <AppBar position="static" color="transparent" elevation={0}>
-      <Toolbar justifyContent="flex-end">
+      <Toolbar>
         <Box display="flex" flex="1" justifyContent="flex-end" alignItems="center">
+          Tema
           <IconButton
             aria-label="Alternar Tema"
             aria-controls="menu-appbar"

@@ -16,7 +16,7 @@ const WaitingComponent = (Component) => (props = {}) => (
 );
 
 const App = () => {
-  const [type, setType] = useState('dark');
+  const [type, setType] = useState('light');
   const prefersDarkMode = useMediaQuery(`(prefers-color-scheme: ${type})`);
 
   const handleOnChangeTheme = useCallback(() => {
@@ -29,16 +29,10 @@ const App = () => {
         palette: {
           type: prefersDarkMode ? 'dark' : 'light',
           primary: {
-            light: '#ffac33',
-            main: '#ff9800',
-            dark: '#b26a00',
+            light: '#ff6c79',
+            main: '#FF4858',
+            dark: '#b2323d',
             contrastText: '#fff',
-          },
-          secondary: {
-            light: '#ff7961',
-            main: '#f44336',
-            dark: '#ba000d',
-            contrastText: '#000',
           },
         },
       }),

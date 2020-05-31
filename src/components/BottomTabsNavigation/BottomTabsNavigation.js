@@ -1,6 +1,11 @@
 import React from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import { Home, AccountBalanceWallet, SwapHorizontalCircleSharp, People } from '@material-ui/icons';
+import {
+  Storefront,
+  AccountBalanceWallet,
+  SwapHorizontalCircleSharp,
+  People,
+} from '@material-ui/icons';
 import { useLocation, useHistory } from 'react-router-dom';
 import { Footer } from 'styles/ui';
 
@@ -15,7 +20,7 @@ const BottomTabsNavigation = () => {
         onChange={(event, newValue) => {
           history.push(newValue);
         }}>
-        <BottomNavigationAction label="Inicio" value="/" icon={<Home />} color="info" />
+        <BottomNavigationAction label="Inicio" value="/" icon={<Storefront />} color="info" />
         <BottomNavigationAction
           label="Transações"
           value="/transacao"
