@@ -36,6 +36,12 @@ const App = () => {
             dark: '#b2323d',
             contrastText: '#fff',
           },
+          secondary: {
+            light: '#ffcf33',
+            main: '#ffc400',
+            dark: '#b28900',
+            contrastText: '#fff',
+          },
         },
       }),
     [prefersDarkMode]
