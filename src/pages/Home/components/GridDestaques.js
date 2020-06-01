@@ -30,7 +30,7 @@ const GridDestaques = () => {
       <GridList className={classes.gridList} cols={1}>
         <GridListTile>
           <img
-            src="/assets/img/plan_ex.png"
+            src={`${process.env.PUBLIC_URL}/assets/img/plan_ex.png`}
             alt="plano"
             className={classes.img}
             draggable="false"
@@ -38,7 +38,7 @@ const GridDestaques = () => {
         </GridListTile>
         <GridListTile>
           <img
-            src="/assets/img/plan_ex.png"
+            src={`${process.env.PUBLIC_URL}/assets/img/plan_ex.png`}
             alt="plano"
             className={classes.img}
             draggable="false"
