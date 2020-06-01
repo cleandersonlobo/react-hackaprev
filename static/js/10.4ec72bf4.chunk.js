@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-hackaprev"]=this["webpackJsonpreact-hackaprev"]||[]).push([[10],{85:function(a,e,t){"use strict";t.r(e);var n=t(0),r=t.n(n),c=t(143),l=t(109),s=t(83);e.default=function(){return r.a.createElement(c.a,null,r.a.createElement(l.a,{variant:"h6",className:"font-weight-bold"},"Transa\xe7\xf5es"),r.a.createElement(s.default,null))}}}]);
-//# sourceMappingURL=10.4ec72bf4.chunk.js.map
