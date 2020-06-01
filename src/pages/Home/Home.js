@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { Image, CardEmpresas } from 'styles/ui';
 import { SearchBar } from 'components';
+import GridDestaques from './components/GridDestaques';
 
 const empresas = [
   {
@@ -40,6 +41,7 @@ const Home = () => {
   return (
     <Container>
       <SearchBar />
+      <GridDestaques />
       <h2>Lojas em destaque</h2>
       <Grid container spacing={2} alignItems="stretch" direction="row">
         {empresas.map((empresa) => (

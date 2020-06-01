@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { SuspenseLoading, BottomTabsNavigation, Header } from 'components';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { Container, Box } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Main } from 'styles/ui';
 import { ClienteContenxt } from 'contexts';
@@ -49,18 +49,16 @@ const App = () => {
             <Main>
               <Header themeType={type} onChangeTheme={handleOnChangeTheme} />
               <Box flexGrow={1}>
-                <Container>
-                  <Switch>
-                    {routes.map(({ component: Component, ...otherProps }) => {
-                      const LazyComponent = WaitingComponent(Component);
-                      return (
-                        <Route key={otherProps.path} {...otherProps}>
-                          <LazyComponent />
-                        </Route>
-                      );
-                    })}
-                  </Switch>
-                </Container>
+                <Switch>
+                  {routes.map(({ component: Component, ...otherProps }) => {
+                    const LazyComponent = WaitingComponent(Component);
+                    return (
+                      <Route key={otherProps.path} {...otherProps}>
+                        <LazyComponent />
+                      </Route>
+                    );
+                  })}
+                </Switch>
               </Box>
               <BottomTabsNavigation />
             </Main>
