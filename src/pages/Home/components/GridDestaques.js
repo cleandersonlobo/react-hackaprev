@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridList, GridListTile } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     flexWrap: 'nowrap',
+    overflowX: 'auto',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(1)',
   },
   img: {
     maxHeight: 180,
@@ -27,24 +27,24 @@ const GridDestaques = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <GridList className={classes.gridList} cols={1}>
-        <GridListTile>
+      <Grid container className={classes.gridList} spacing={2}>
+        <Grid item xs lg={3}>
           <img
             src={`${process.env.PUBLIC_URL}/assets/img/plan_ex.png`}
             alt="plano"
             className={classes.img}
             draggable="false"
           />
-        </GridListTile>
-        <GridListTile>
+        </Grid>
+        <Grid item xs lg>
           <img
             src={`${process.env.PUBLIC_URL}/assets/img/plan_ex.png`}
             alt="plano"
             className={classes.img}
             draggable="false"
           />
-        </GridListTile>
-      </GridList>
+        </Grid>
+      </Grid>
     </div>
   );
 };

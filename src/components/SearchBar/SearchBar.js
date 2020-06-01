@@ -12,6 +12,7 @@ const SearchBar = () => {
         type="search"
         placeholder="Buscar planos..."
         id="outlined-adornment-search"
+        color="secondary"
         startAdornment={
           <InputAdornment position="end">
             <IconButton aria-label="search" edge="end">
