@@ -23,6 +23,13 @@
 - React
 - Material-Ui
 
+### SplashScreen
+![App-design](./screenshot/SplashScreen.png)
+
+### Cadastro
+![App-design](./screenshot/Cadastro.png)
+
+
 
 ## Author
 
