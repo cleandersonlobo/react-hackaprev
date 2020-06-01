@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 import { WalletIcon } from 'components';
 import Skeleton from '@material-ui/lab/Skeleton';
-import { Paper, Grid, Box } from '@material-ui/core';
+import { Paper, Grid, Box, Typography } from '@material-ui/core';
 import { yellow } from '@material-ui/core/colors';
 import StarIcon from '@material-ui/icons/Star';
 import { ClienteContenxt } from 'contexts';
@@ -26,8 +26,10 @@ const CardSaldo = () => {
                   Saldo
                 </Box>
                 {saldo ? (
-                  <Box fontWeight="fontWeightBold" textAlign="center" fontSize={22} lineHeight={2}>
-                    {saldo.cashback_amount}
+                  <Box fontWeight="fontWeightBold" textAlign="center">
+                    <Typography style={{ fontSize: 'calc(1.2rem + 0.5vw)' }}>
+                      {saldo.cashback_amount}
+                    </Typography>
                   </Box>
                 ) : (
                   <Skeleton animation="wave" height={40} />

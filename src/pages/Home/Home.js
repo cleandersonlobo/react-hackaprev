@@ -38,12 +38,12 @@ const empresas = [
 const Home = () => {
   return (
     <Container>
-      <h2>Cashback</h2>
+      <h2>Lojas em destaque</h2>
       <Grid container spacing={2} alignItems="stretch" direction="row">
         {empresas.map((empresa) => (
-          <Grid key={empresa.name} item xs={4} sm={4} md={3} lg={2}>
+          <Grid key={empresa.name} item xs={4} sm={3} md={2} lg={1}>
             <CardEmpresas>
-              <Box display="flex" alignItems="stretch" height="100%">
+              <Box display="flex" alignItems="stretch" height="100%" maxHeight={120}>
                 <Image src={empresa.img} alt={empresa.name} draggable="false" />
               </Box>
               <div className="card-details">

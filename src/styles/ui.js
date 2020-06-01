@@ -19,7 +19,6 @@ export const Image = styled.img`
   display: block;
   object-fit: cover;
   max-width: 100%;
-  max-height: 100%;
   overflow: hidden;
   -o-object-fit: cover;
 `;
@@ -37,12 +36,15 @@ export const CardEmpresas = styled(Paper).attrs({
     padding-bottom: 5px;
     font-size: 1.2rem;
     p:first-child {
+      padding-top: 5px;
+      text-align: center;
+      letter-spacing: 0.5px;
       color: #ff4858;
       font-weight: 800;
     }
-    p:first-child {
+    p:last-child {
       text-align: center;
-      font-weight: bold;
+      font-weight: 500;
       letter-spacing: 0.4px;
     }
   }
